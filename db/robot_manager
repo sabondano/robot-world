@@ -1,0 +1,27 @@
+---
+robots:
+- id: 5
+  name: Johnny B. Goode
+  city: Miami
+  state: FL
+  avatar: https://robohash.org/3
+  birthdate: January 01, 2015
+  date_hired: February 01, 2015
+  department: Finance
+- id: 6
+  name: Kokomo
+  city: New York
+  state: New York
+  avatar: https://robohash.org/new york
+  birthdate: October 23, 2001
+  date_hired: August 05, 2005
+  department: HR
+- id: 7
+  name: Muddy Waters
+  city: Chicago
+  state: IL
+  avatar: https://robohash.org/Chicago
+  birthdate: March 19, 1956
+  date_hired: December 01, 1999
+  department: Sales
+total: 8
