@@ -56,7 +56,11 @@ class RobotManager
   end
 
   def self.average_age
-    all.map { |robot| robot.age }.reduce(:+) / all.count 
+    if all.empty?
+      "No Robots"
+    else
+      all.map { |robot| robot.age }.reduce(0, :+) / all.count 
+    end
   end
   
   def self.hired_per_year
