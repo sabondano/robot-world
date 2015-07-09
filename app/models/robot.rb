@@ -18,4 +18,8 @@ class Robot
     @date_hired = data["date_hired"]
     @department  = data["department"]
   end
+
+  def age
+    (Date.today - Date.parse(birthdate)).to_i / 365
+  end
 end

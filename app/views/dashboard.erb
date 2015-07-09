@@ -5,5 +5,32 @@
   <li><a href="/robots/new">New Robot</a></li>
 </ul>
 
-<p>Average age: <%= @robots.average_age %></p>
+<p>Average age: <%= @average_age %></p>
 
+<table>
+  <tr><th>Number Robots Hired Per Year</th> </tr>
+  <% @robots_hired_per_year.each do |year, number_hired| %>
+    <tr><td><%= year %>: <%= number_hired %></td></tr>
+  <% end %> 
+</table>
+
+<table>
+  <tr><th>Number of Robots Per Deparment</th> </tr>
+  <% @robots_per_department.each do |department, number| %>
+    <tr><td><%= department %>: <%= number %></td></tr>
+  <% end %> 
+</table>
+
+<table>
+  <tr><th>Number of Robots Per City</th> </tr>
+  <% @robots_per_city.each do |city, number| %>
+    <tr><td><%= city %>: <%= number %></td></tr>
+  <% end %> 
+</table>
+
+<table>
+  <tr><th>Number of Robots Per State</th> </tr>
+  <% @robots_per_state.each do |state, number| %>
+    <tr><td><%= state %>: <%= number %></td></tr>
+  <% end %> 
+</table>

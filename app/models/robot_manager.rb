@@ -53,7 +53,33 @@ class RobotManager
   end
 
   def self.average_age
-    all
+    all.map { |robot| robot.age }.reduce(:+) / all.count 
+  end
+  
+  def self.hired_per_year
+    robots_hired_per_year.map do |year, robots|
+      [year, robots.count]
+    end.to_h
+  end
+
+  def self.number_of_robots_per(parameter)
+    robots_grouped_by(parameter).map do |parameter, robots|
+      [parameter, robots.count]
+    end.to_h
+  end
+  
+  private
+
+  def self.robots_hired_per_year
+    all.group_by do |robot|
+      Date.parse(robot.date_hired).year
+    end
+  end 
+
+  def self.robots_grouped_by(parameter)
+    all.group_by do |robot|
+     robot.send(parameter)
+    end
   end
 end
 
