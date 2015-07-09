@@ -1,9 +1,4 @@
-require 'models/robot_manager'
-
 class RobotWorldApp < Sinatra::Base
-  set :root, File.join(File.dirname(__FILE__), '..')
-  set :method_override, true
-
   get '/' do
     @average_age = RobotManager.average_age    
     @robots_hired_per_year = RobotManager.hired_per_year
