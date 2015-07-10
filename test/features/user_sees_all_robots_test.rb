@@ -9,20 +9,19 @@ class UserSeesAllRobotsTest < FeatureTest
   end
 
   def test_user_can_fill_form
-    skip
     visit("/")
     assert_equal "/", current_path
 
     click_link("New Robot")
-    assert_equal "/tasks/new", current_path
+    assert_equal "/robots/new", current_path
 
-    fill_in("task-title", with: "pizza")
-    fill_in("task-description", with: "longer pizza")
+    fill_in("robot-name", with: "pizza")
+    fill_in("robot-city", with: "longer pizza")
     click_button("submit")
-
     assert page.has_content?("pizza")
   end
 
-  def test_user_sees_index_of_tasks
+  def test_user_sees_index_of_robots
+    
   end
 end
