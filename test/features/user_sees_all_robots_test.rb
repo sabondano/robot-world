@@ -22,6 +22,6 @@ class UserSeesAllRobotsTest < FeatureTest
   end
 
   def test_user_sees_index_of_robots
-    
+     
   end
 end
